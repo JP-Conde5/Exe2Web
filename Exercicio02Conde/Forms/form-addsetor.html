@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="shortcut icon" href="../Assets/icon.png" type="image/x-icon">
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Bootstrap/js/popper.min.js"></script>
+    <script src="../Bootstrap/js/jquery.min.js"></script>
+    <title>High Vision</title>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(function () {
+                $("#navbar").load("../navbar.html")
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav id="navbar"></nav>
+    </div>
+    <div class="container-fluid py-4">
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-12">
+                    <h1>Cadastrar</h1>
+                </div>
+            </div>
+            <form action="../Crudtrabalhador/addtrabalhador.php">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Nome do Setor</label>
+                    <input name="nome" type="text" class="form-control" id="nome" aria-describedby="emailHelp"
+                        placeholder="Limpeza">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Valor da Despesa</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="R$">
+                </div>
+                <button type="submit" class="btn btn-outline-info">Enviar</button>
+                <button type="submit" class="btn btn-outline-danger">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
