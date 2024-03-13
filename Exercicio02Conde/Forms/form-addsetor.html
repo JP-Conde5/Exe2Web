@@ -29,15 +29,14 @@
                     <h1>Cadastrar</h1>
                 </div>
             </div>
-            <form action="../Crudtrabalhador/addtrabalhador.php">
+            <form method="post" action="../Crudsetor/addsetor.php">
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Nome do Setor</label>
-                    <input name="nome" type="text" class="form-control" id="nome" aria-describedby="emailHelp"
-                        placeholder="Limpeza">
+                    <label for="Nome">Nome do Setor</label>
+                    <input name="nome" type="text" class="form-control" id="Nome" placeholder="Limpeza" required>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1">Valor da Despesa</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="R$">
+                    <label for="Despesa">Valor da Despesa</label>
+                    <input type="number" class="form-control" id="Despesa" placeholder="R$" required>
                 </div>
                 <button type="submit" class="btn btn-outline-info">Enviar</button>
                 <button type="submit" class="btn btn-outline-danger">Cancelar</button>

@@ -1,3 +1,11 @@
+<?php
+    require_once "Exercicio02Conde/BD/init.php";
+    $PDO = db_connect();
+    $cod = "SELECT id, nome FROM Setor ORDER BY nome";
+    $exe = $PDO->prepare(cod);
+    $exe->execute();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,16 +32,20 @@
                 <h1>Cadastrar</h1>
             </div>
         </div>
-        <form action="../Crudtrabalhador/addtrabalhador.php">
+        <form method="post" action="../Crudtrabalhador/addtrabalhador.php">
             <div class="form-group">
-                <label for="exampleInputEmail1">Nome do Trabalhador</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
-                <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
+                <label for="Nome">Nome do Trabalhador</label>
+                <input type="text" class="form-control" id="Nome" placeholder="João da Silva" required>
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Valor da Despesa</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                <label for="Idade">Idade</label>
+                <input type="number" class="form-control" id="Idade" placeholder="8" required>
             </div>
+            <select class="form-control">
+                <?php while($nome = $stmt.fetch(PDO::FETCH_ASSOC)):?>
+                    <option>Select padrão</option>
+                <?php endwhile; ?>
+            </select>
             <button type="submit" class="btn btn-outline-info">Enviar</button>
             <button type="submit" class="btn btn-outline-danger">Cancelar</button>
         </form>

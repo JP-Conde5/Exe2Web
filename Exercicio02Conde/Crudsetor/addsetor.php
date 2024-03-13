@@ -6,8 +6,8 @@
         echo "Preencha todos os campos!!!";
         exit;
     }
-    $PDO = db_connection();
-    $cod = "INSERT INTO setor(nome, despesa) VALUES(:nome, :despesa)";
+    $PDO = db_connect();
+    $cod = "INSERT INTO Setor(nome, despesa) VALUES(:nome, :despesa)";
     $exe = $PDO->prepare($PDO);
     $exe->bindParam(":nome", $nome);
     $exe->bindParam(":despesa", $despesa);
