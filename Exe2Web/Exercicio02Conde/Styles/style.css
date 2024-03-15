@@ -1,0 +1,15 @@
+.text{
+    font-size: larger;
+    text-align: justify;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.title{
+    text-align: center;
+    color:black;
+}
+
+.subtitle{
+    color:gray;
+    text-align: center;
+}
